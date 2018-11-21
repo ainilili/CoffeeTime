@@ -8,9 +8,6 @@
 ```web```   前端页面存放目录
 ### 项目搭建
 
-```git clone https://gitee.com/ainilili/CoffeeTime.git```
+```git clone https://github.com/ainilili/CoffeeTime.git```
 
 > 以Maven项目的模式导入你的IDE中
-
-### Host修改
-默认Host都是本地链接，也可将Host改成```47.94.103.241```直连笔者的云服务器！
