@@ -1,0 +1,24 @@
+nocat: 
+  port: 8080
+  resourcePath: /web
+  charset: utf-8
+  reviceBufferSize: 104857600
+  timeout: 0
+  properties:
+    name: nocat
+  listeners: 
+    - handler: org.nico.aoc.listener.NoaocListener
+      payload: \{\"xmls\":[\"cat-mysql.xml\",\"cat-redis.xml\"],\"packs\":[\"org.nico.ct\"],\"compents\":[\"org.nico.cat.mvc.compent.MVCCompent\"]\}
+    - handler: org.nico.cat.mvc.listener.ListenerForNocat
+      payload: \{\"scanpack\":\"org.nico.ct.controller\"\} 
+  welcomes:
+    - index.html
+    - index.jsp
+    - index.asp
+    - index.php
+  filters: 
+    - uri: /v1/authc/**
+      handler: org.nico.ct.section.AuthFilter
+  apis:
+    - uri: /v1/**
+      handler: org.nico.cat.mvc.router.RouterForNocat   

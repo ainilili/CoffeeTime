@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app>
+	<cat:welcomes>
+		<welcome>index.html</welcome>
+		<welcome>index.jsp</welcome>
+		<welcome>index.asp</welcome>
+		<welcome>index.php</welcome> 
+	</cat:welcomes>
+
+	<cat:configs>
+	   	<property field="server_resource_path" 			value="/web" 				/>
+		<property field="server_port" 					value="8080" 				/>
+		<property field="server_charset" 				value="utf-8" 				/>
+		<property field="server_revice_buffer_size" 	value="104857600" 			/>
+		<property field="server_so_timeout" 			value="0" 					/>
+	</cat:configs>
+	
+	<cat:listeners>
+		<listener>
+		    <handler>org.nico.aoc.listener.NoaocListener</handler>
+			<payload>
+				{
+					"xmls":[
+						"cat-mysql.xml",
+						"cat-redis.xml"
+					],
+					"packs":[
+						"org.nico.ct"
+					],
+					"compents":[
+						"org.nico.cat.mvc.compent.MVCCompent"
+					]
+				}
+			</payload>
+		</listener>
+		<listener>
+		    <handler>org.nico.cat.mvc.listener.ListenerForNocat</handler>
+			<payload>
+				{"scanpack":"org.nico.ct.controller"}
+			</payload>
+		</listener>
+	</cat:listeners>
+	
+	<cat:filters>
+		<filter>
+			<uri>/v1/authc/**</uri>
+			<handler>org.nico.ct.section.AuthFilter</handler>
+		</filter>
+	</cat:filters>
+	
+	<cat:apis>
+		<api>
+			<uri>/v1/**</uri>
+			<handler>org.nico.cat.mvc.router.RouterForNocat</handler>
+		</api>
+	</cat:apis>
+	
+</app>

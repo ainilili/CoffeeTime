@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Coffee Time</title>
+    <link rel="stylesheet" href="/plugins/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/style/common/common.css" media="all">
+  </head>
+  <style type="text/css">
+    
+  </style>
+
+   <script src="/plugins/layui/layui.js"></script>
+   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+   <script src="/script/common/common.js"></script>
+   <script src="/script/tool/module-temp/common.js"></script>
+   <!-- electron 与 jquery 兼容 -->
+   <script>if (typeof module === 'object') {window.jQuery = window.$ = module.exports;};</script>
+   <script src="/script/tool/module-temp/build.js"></script>
+
+  <body>
+    <!-- Banner -->
+    <div class = "base-container">
+        <div class = "base-line" >
+          <div class = "base-wrapper">
+            <ul class="layui-nav " id="banner_tabs"></ul>
+          </div>
+        </div>
+
+        <div class="base-wrapper">
+          <div class="layui-row layui-col-space15 top-10">
+             <div class="layui-col-md2">
+              <div class="layui-card">
+                <div class="layui-card-body">
+                  <ul class="nico-ul font-style" id="temp-options">
+                 
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="layui-col-md10">
+              <div class="layui-card">
+                <div class="layui-card-header font-style nico-padding">
+                  <i class="layui-icon layui-icon-template"></i> 模板构建
+                </div>
+                <div class="layui-card-body">
+                  <form class="layui-form top-20" action="">
+                    
+                    <blockquote class="layui-elem-quote">
+                      <b>系统自带一些默认字段: </b>
+                      <br>
+<pre>
+tableName[String]：表名
+className[String]：类名
+classNameLower[String]：首字母小写的类名
+fields[LIST]：对应表的字段
+normalFields[LIST]：对应表的普通字段
+primaryFields[LIST]：对应表的主键字段
+{
+  "fieldName": Java字段名，例如：userId
+  "columnName": 数据库字段名，例如：user_id
+  "methodName": 方法名，例如: UserId
+  "dbType": 数据库类型
+  "valueType": Java类型
+  "comment": 字段注释
+}
+</pre>
+                      <p>如果以上字段满足不了您的需求，您可以在设置参数框内自定义参数</p>
+                    </blockquote>
+
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">选择模板</label>
+                      <div class="layui-input-block">
+                        <select name="configId" lay-verify="required" lay-filter="temp-config" id="temp-config">
+                          
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">选择数据源</label>
+                      <div class="layui-input-block">
+                        <select name="dataSource" lay-verify="required" lay-filter="data-source" id="data-source">
+                          
+                        </select>
+                      </div>
+                    </div>
+                  
+                    <ul class="nico-list-side" id="table-infos" style="padding-left: 100px">
+                      
+                    </ul>
+
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">设置参数</label>
+                      <div class="layui-input-block">
+                        <textarea type="text" id="propertiesJson" name="propertiesJson" lay-verify="required" autocomplete="off" placeholder="请输入设置参数(Json)" class="layui-textarea"></textarea>
+                      </div>
+                    </div>
+                     <div class="layui-form-item">
+                      <div class="layui-input-block">
+                        <button class="layui-btn nico-right" lay-submit="" lay-filter="submit" >立即生成</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>

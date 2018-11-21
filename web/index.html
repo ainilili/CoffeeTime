@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Coffee Time</title>
+    <link rel="stylesheet" href="/plugins/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/style/common/common.css" media="all">
+  </head>
+  <style type="text/css">
+
+    .canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    .ctext {
+  position: absolute;
+  width: 80%;
+  height: 70%;
+  margin-left:10%;
+  user-select: none;
+}
+  </style>
+
+   <script src="/plugins/layui/layui.js"></script>
+   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+   <script src="/script/common/common.js"></script>
+   <script src="/script/index.js"></script>
+   <!-- electron 与 jquery 兼容 -->
+   <script>if (typeof module === 'object') {window.jQuery = window.$ = module.exports;};</script>
+
+  <body>
+    <!-- Banner -->
+    <div class = "base-container" id="base-container">
+      <div class = "base-line" >
+        <div class = "base-wrapper">
+          <ul class="layui-nav " id="banner_tabs"></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

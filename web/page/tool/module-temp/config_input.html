@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Coffee Time</title>
+    <link rel="stylesheet" href="/plugins/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/style/common/common.css" media="all">
+  </head>
+  <style type="text/css">
+    
+  </style>
+
+   <script src="/plugins/layui/layui.js"></script>
+   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+   <script src="/script/common/common.js"></script>
+   <script src="/script/common/common_input.js"></script>
+   <script src="/script/tool/module-temp/common.js"></script>
+   <!-- electron 与 jquery 兼容 -->
+   <script>if (typeof module === 'object') {window.jQuery = window.$ = module.exports;};</script>
+   <script src="/script/tool/module-temp/config_input.js"></script>
+
+  <body>
+    <!-- Banner -->
+    <div class = "base-container">
+        <div class = "base-line" >
+          <div class = "base-wrapper">
+            <ul class="layui-nav " id="banner_tabs"></ul>
+          </div>
+        </div>
+
+        <div class="base-wrapper">
+          <div class="layui-row layui-col-space15 top-10">
+             <div class="layui-col-md2">
+              <div class="layui-card">
+                <div class="layui-card-body">
+                  <ul class="nico-ul font-style" id="temp-options">
+                 
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="layui-col-md10">
+              <div class="layui-card">
+                <div class="layui-card-header font-style nico-padding">
+                  <i class="layui-icon">&#xe66e;</i> 添加数据源
+                  <a href="javascript:history.go(-1);" class="layui-btn nico-right">返回</a>
+                </div>
+                
+                <div class="layui-card-body">
+                  <form class="layui-form" lay-filter="data-form">
+
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">名称</label>
+                      <div class="layui-input-block">
+                        <input type="text" id="name" name="name" lay-verify="required" autocomplete="off" placeholder="请输入名称" class="layui-input">
+                      </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">前缀</label>
+                      <div class="layui-input-block">
+                        <input type="text" id="prefix" name="prefix" lay-verify="required" autocomplete="off" placeholder="请输入设置前缀" class="layui-input">
+                      </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">后缀</label>
+                      <div class="layui-input-block">
+                        <input type="text" id="suffix" name="suffix" lay-verify="required" autocomplete="off" placeholder="请输入设置后缀" class="layui-input">
+                      </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">设置参数</label>
+                      <div class="layui-input-block">
+                        <textarea type="text" id="propertiesJson" name="propertiesJson" lay-verify="required" autocomplete="off" placeholder="请输入设置参数(Json)" class="layui-textarea"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                      <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit="" lay-filter="submit" >立即提交</button>
+                      </div>
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </body>
+  
+</html>

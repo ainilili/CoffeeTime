@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Coffee Time</title>
+    <link rel="stylesheet" href="/plugins/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/style/common/common.css" media="all">
+  </head>
+  <style type="text/css">
+  </style>
+
+   <script src="/plugins/layui/layui.js"></script>
+   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+   <script src="/script/common/common.js"></script>
+   <script src="/script/login/login.js"></script>
+   <!-- electron 与 jquery 兼容 -->
+   <script>if (typeof module === 'object') {window.jQuery = window.$ = module.exports;};</script>
+    
+  <body>
+    <!-- Banner -->
+    <div class = "base-container">
+        <div class = "base-line">
+          <div class = "base-wrapper">
+            <ul class="layui-nav " id="banner_tabs"></ul>
+          </div>
+        </div>
+
+        <form class="layui-form base-box" style="margin-top:30px;padding:20px;background:#FFFFFF">
+          <div class="layui-form-item">
+            <label class="layui-form-label">用户名</label>
+            <div class="layui-input-block">
+              <input type="text" id="accountName" name="accountName" lay-verify="required|email" autocomplete="off" placeholder="请输入邮箱" class="layui-input">
+            </div>
+          </div>
+
+          <div class="layui-form-item">
+            <label class="layui-form-label">密码</label>
+            <div class="layui-input-block">
+              <input type="password" id="accountWord" name="accountWord" lay-verify="required|pass" autocomplete="off" placeholder="请输入密码" class="layui-input">
+            </div>
+          </div>
+
+          <div class="layui-form-item">
+            <div class="layui-input-block">
+              <a href="/page/login/register.html" class="nico-left">点击注册</a>
+              <a href="/page/login/forget.html" class="nico-right">忘记密码</a>
+            </div>
+          </div>
+
+          <div class="layui-form-item">
+            <div class="layui-input-block">
+              <button class="layui-btn" lay-submit="" lay-filter="login" id="submitLogin">立即登录</button>
+            </div>
+          </div>
+
+        </form>
+    </div>
+  </body>
+</html>

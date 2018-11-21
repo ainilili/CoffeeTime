@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Coffee Time</title>
+    <link rel="stylesheet" href="/plugins/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/style/common/common.css" media="all">
+  </head>
+  <style type="text/css">
+    
+  </style>
+
+   <script src="/plugins/layui/layui.js"></script>
+   <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+   <script src="/script/common/common.js"></script>
+   <script src="/script/common/common_list.js"></script>
+   <script src="/script/tool/module-temp/common.js"></script>
+   <!-- electron 与 jquery 兼容 -->
+   <script>if (typeof module === 'object') {window.jQuery = window.$ = module.exports;};</script>
+   <script src="/script/tool/module-temp/config_list.js"></script>
+
+  <body>
+    <!-- Banner -->
+    <div class = "base-container">
+        <div class = "base-line" >
+          <div class = "base-wrapper">
+            <ul class="layui-nav " id="banner_tabs"></ul>
+          </div>
+        </div>
+
+        <div class="base-wrapper">
+          <div class="layui-row layui-col-space15 top-10">
+             <div class="layui-col-md2">
+              <div class="layui-card">
+                <div class="layui-card-body">
+                  <ul class="nico-ul font-style" id="temp-options">
+                 
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="layui-col-md10">
+              <div class="layui-card">
+                <div class="layui-card-header font-style nico-padding">
+                  <i class="layui-icon layui-icon-template"></i> 我的模板设置
+                  <a href="config_input.html" class="layui-btn nico-right">创建模板设置</a>
+                </div>
+                <div class="layui-card-body">
+                  <div class="layui-form">
+                    <table class="layui-table">
+                      <colgroup>
+                        <col width="200">
+                        <col width="100">
+                        <col width="50">
+                        <col width="50">
+                        <col width="200">
+                        <col width="200">
+                        <col width="200">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>名称</th>
+                          <th>前缀</th>
+                          <th>后缀</th>
+                          <th>Json配置</th>
+                          <th>创建用户ID</th>
+                          <th>操作</th>
+                        </tr> 
+                      </thead>
+                      <tbody id="data-list">
+                        
+                      </tbody>
+                    </table>
+                    <div id="data-page"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>

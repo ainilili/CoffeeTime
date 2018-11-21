@@ -1,0 +1,141 @@
+.canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+body{
+	background-color: #F2F2F2
+}
+
+.base-container{
+	width: 100%;
+	min-height: 900px;
+	overflow: hidden;
+}
+
+.base-container .base-wrapper{
+	margin: 0px auto;
+	height: auto;
+}
+
+@media screen and (min-width: 1400px){
+	.base-wrapper{
+		width: 1500px;
+	}
+    
+}
+@media screen and (max-width: 1400px){
+	.base-wrapper{
+		width: 1100px;
+	}
+    
+}
+
+.base-container .base-box{
+	width: 500px;
+	margin: 0px auto;
+	padding-top:40px!important;
+	padding-right:50px!important;
+	height: auto;
+}
+
+.base-line{
+	width: 100%;
+	height: auto;
+	background-color:#68838B;
+}
+
+#banner_tabs{
+	height:80px;
+	line-height:80px;
+}
+
+#login{
+	line-height:80px!important;
+}
+
+.layui-nav{
+	background-color:transparent!important;
+}
+
+.nico-right{
+	float: right;
+}
+
+.nico-left{
+	float: left;
+}
+
+.top-20{
+	margin-top: 20px;
+}
+
+.right-20{
+	margin-right: 20px;
+}
+
+.nico-padding{
+	padding: 15px;
+	padding-top: 12px;
+	padding-bottom: 0px
+}
+
+.nico-no-padding{
+	padding: 0px;
+}
+
+.top-10{
+	margin-top: 10px;
+}
+
+.font-style{
+	font-size: 15px;
+}
+
+.nico-ul{
+	width: auto;
+	padding: 10px;
+	overflow: hidden;
+}
+
+.nico-ul li{
+	width: auto;
+	line-height: 30px;
+	color: #333333;
+	margin-top: 5px;
+	padding: 5px 5px;
+	cursor: pointer;
+}
+
+.nico-ul li:hover{
+
+	background: #EEEEEE;
+}
+
+.nico-ellipsis{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.nico-list-side{
+	overflow: hidden;
+}
+
+.nico-list-side li{
+	float: left;
+	margin-left: 10px;
+	padding: 5px 10px;
+	margin-bottom: 10px;
+	min-width: 60px;
+	text-align: center;
+	font-size: 15px;
+	color: #003366;
+	background: #fafafa;
+	cursor: pointer;
+}
+
+.nico-list-side li:hover {
+	background: #f1f1f1;
+}

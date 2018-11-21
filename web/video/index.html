@@ -1,0 +1,29 @@
+<html>  
+  <head>  
+  <title>视频直播</title>  
+  <meta charset="utf-8">  
+  <link href="http://vjs.zencdn.net/5.5.3/video-js.css" rel="stylesheet">  
+  <!-- If you'd like to support IE8 -->  
+  <script src="http://vjs.zencdn.net/ie8/1.1.1/videojs-ie8.min.js"></script>  
+</head>  
+<body>  
+ <div id="playercontainer" style="margin:0px auto"></div>
+<script type="text/javascript" src="player/cyberplayer.js"  charset="UTF-8"></script>
+<script type="text/javascript">
+    var player = cyberplayer("playercontainer").setup({
+        width: 985,
+        height: 628,
+        file: "rtmp://127.0.0.1/live/nico", // <—rtmp直播地址
+        autostart: true,
+        stretching: "uniform",
+        volume: 100,
+        controls: true,
+        rtmp: {
+            reconnecttime: 5, // rtmp直播的重连次数
+            bufferlength: 1 // 缓冲多少秒之后开始播放 默认1秒
+        },
+        ak: "ee4ded6baa8143d5a4b46818f975dd3f" // 公有云平台注册即可获得accessKey
+    });
+</script>
+</body>  
+</html>  
