@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <books>
 	<book id="DataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-<!-- 		<param key="jdbcUrl" value="jdbc:mysql://localhost:3306/ct?useUnicode=true&characterEncoding=utf8&useSSL=false" /> -->
-		<param key="jdbcUrl" value="jdbc:mysql://192.168.50.221:3306/ct?useUnicode=true&characterEncoding=utf8&useSSL=false" />
+		<param key="jdbcUrl" value="jdbc:mysql://localhost:3306/ct?useUnicode=true&characterEncoding=utf8&useSSL=false" />
 		<param key="user" value="root" />
-		<param key="password" value="riskkpd139" />
+		<param key="password" value="xxx" />
 		<param key="driverClass" value="com.mysql.jdbc.Driver" />
 		<param key="maxPoolSize" value="100" />
 		<param key="minPoolSize" value="10" />
